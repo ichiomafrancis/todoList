@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 60rem;
+  margin: 5rem auto;
+  background-color: #1680ea;
+  height: 80vh;
+  padding: 3rem 5rem;
+  position: relative;
+}
+
+.header > h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.input--form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.input--form > input {
+  padding: 0.5rem 3rem;
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 0.3rem 0.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+button:hover,
+button:active {
+  /* color: ; */
+  background-color: #16e027;
+  cursor: pointer;
+}
+
+.delete:hover,
+.delete:active {
+  /* color: ; */
+  background-color: #f00;
+}
+
+.clear--completed {
+  position: absolute;
+  bottom: 5rem;
+  left: 25rem;
+}
+
+.todo {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.todo--item {
+  width: 40rem;
+  /* outline: none; */
+  border: 0.1rem solid #ccc;
+  padding: 0.3rem 3rem;
+  font-size: 2.5rem;
+  background-color: #ccc;
+}
