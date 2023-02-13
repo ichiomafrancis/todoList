@@ -1,19 +1,32 @@
 import React from "react";
 import ToDo from "./ToDo";
 
-function ToDoList({ todoList, handleFilter, deleteTodoItem }) {
-  const toDos = todoList.map((todo) => {
-    return <ToDo key={todo.id} {...todo} deleteTodoItem={deleteTodoItem} />;
-  });
+const ToDoList = ({ todoList, setTodoList }) => {
+  const handleToggle = (todo) => {
+    const toggle = todoList.map((item) => {
+      if (item.id === todo.id) {
+        return { ...item, completed: !item.completed };
+      }
+      return item;
+    });
+    setTodoList(toggle);
+  };
 
-  return (
-    <div>
-      {toDos}
-      <button onClick={handleFilter} className="clear--completed">
-        Clear Completed
-      </button>
-    </div>
-  );
-}
+  const handleDelete = ({ id }) => {
+    setTodoList(todoList.filter((todo) => todo.id !== id));
+  };
+
+  const toDos = todoList.map((todo) => {
+    return (
+      <ToDo
+        key={todo.id}
+        {...todo}
+        markDone={() => handleToggle(todo)}
+        deleteTodo={() => handleDelete(todo)}
+      />
+    );
+  });
+  return <div>{toDos}</div>;
+};
 
 export default ToDoList;
