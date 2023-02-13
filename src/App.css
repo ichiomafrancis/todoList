@@ -5,7 +5,7 @@
 }
 
 .app {
-  background-color: #12343b;
+  background-color: #0c4a6e;
   min-width: 45rem;
   min-height: 65rem;
   padding: 3rem;
@@ -30,6 +30,7 @@
   align-items: center;
   margin-bottom: 3rem;
 }
+
 .form-input {
   outline: none;
   width: 30rem;
@@ -56,7 +57,7 @@ button:hover {
 }
 
 .button-add {
-  background-color: #f1af71;
+  background-color: #06b6d4;
 }
 
 .list-wrapper {
@@ -76,7 +77,7 @@ button:hover {
 
 .list {
   width: 22rem;
-  background-color: #12343b;
+  background-color: #0c4a6e;
   border: none;
   color: #ccc;
   font-size: 2rem;
@@ -93,21 +94,17 @@ button:hover {
 }
 
 .button-complete {
-  color: #ff6c6c;
-}
-
-.button-edit {
-  color: #e2d029;
-}
-
-.button-delete {
   color: lightseagreen;
 }
 
-.button-delete:hover,
+.button-delete {
+  color: #ef4444;
+}
+
+/* .button-delete:hover,
 .button-delete:active {
   background-color: #f00;
-}
+} */
 
 .complete {
   text-decoration-style: solid;
