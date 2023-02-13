@@ -38,7 +38,7 @@
   font-size: 2rem;
   color: #ccc;
   background-color: #000;
-  border: 0.1rem solid #c89666;
+  border: 0.1rem solid #06b6d4;
   border-radius: 1rem;
 }
 
@@ -109,8 +109,8 @@ button:hover {
 .complete {
   text-decoration-style: solid;
   text-decoration-line: line-through;
-  text-decoration-color: #ff6c6c;
-  opacity: 0.6;
+  text-decoration-color: #facc15;
+  opacity: 0.7;
 }
 
 input:focus,
