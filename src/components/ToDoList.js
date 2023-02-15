@@ -1,7 +1,7 @@
 import React from "react";
 import ToDo from "./ToDo";
 
-const ToDoList = ({ todoList, setTodoList, setEditTodo }) => {
+const ToDoList = ({ todoList, setTodoList }) => {
   const handleToggle = (todo) => {
     const toggle = todoList.map((item) => {
       if (item.id === todo.id) {
@@ -10,19 +10,6 @@ const ToDoList = ({ todoList, setTodoList, setEditTodo }) => {
       return item;
     });
     setTodoList(toggle);
-    // setTodoList(
-    //   todoList.map((item) => {
-    //     if (item.id === todo.id) {
-    //       return { ...item, completed: !item.completed };
-    //     }
-    //     return item;
-    //   })
-    // );
-  };
-
-  const handleEdit = ({ id }) => {
-    const findTodo = todoList.find((todo) => todo.id === id);
-    setEditTodo(findTodo);
   };
 
   const handleDelete = ({ id }) => {
@@ -35,17 +22,11 @@ const ToDoList = ({ todoList, setTodoList, setEditTodo }) => {
         key={todo.id}
         {...todo}
         markDone={() => handleToggle(todo)}
-        editTask={() => handleEdit(todo)}
         deleteTodo={() => handleDelete(todo)}
       />
     );
   });
-  return (
-    <div>
-      {toDos}
-      {/* <button className="clear--completed">Clear Completed</button> */}
-    </div>
-  );
+  return <div>{toDos}</div>;
 };
 
 export default ToDoList;

@@ -9,7 +9,6 @@ const App = () => {
   const initialState = JSON.parse(localStorage.getItem("todoList")) || [];
   const [input, setInput] = useState("");
   const [todoList, setTodoList] = useState(initialState);
-  const [editTodo, setEditTodo] = useState(null);
 
   useEffect(() => {
     localStorage.setItem("todoList", JSON.stringify(todoList));
@@ -26,16 +25,10 @@ const App = () => {
           setInput={setInput}
           todoList={todoList}
           setTodoList={setTodoList}
-          editTodo={editTodo}
-          setEditTodo={setEditTodo}
         />
       </div>
       <div>
-        <ToDoList
-          todoList={todoList}
-          setTodoList={setTodoList}
-          setEditTodo={setEditTodo}
-        />
+        <ToDoList todoList={todoList} setTodoList={setTodoList} />
       </div>
     </div>
   );

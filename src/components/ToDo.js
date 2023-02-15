@@ -1,6 +1,6 @@
 import React from "react";
 
-const ToDo = ({ task, completed, markDone, editTask, deleteTodo }) => {
+const ToDo = ({ task, completed, markDone, deleteTodo }) => {
   return (
     <div className="list-wrapper">
       <li className="list-item">
@@ -13,9 +13,6 @@ const ToDo = ({ task, completed, markDone, editTask, deleteTodo }) => {
         <div>
           <button className="button-complete" onClick={markDone}>
             <i className="fa fa-check-circle"></i>
-          </button>
-          <button className="button-edit" onClick={editTask}>
-            <i className="fa fa-edit"></i>
           </button>
           <button className="button-delete" onClick={deleteTodo}>
             <i className="fa fa-trash"></i>
