@@ -1,22 +1,6 @@
 import React from "react";
 
 const InputForm = ({ input, setInput, todoList, setTodoList }) => {
-  // const updateTodo = (id, task, completed) => {
-  //   const newTodo = todoList.map((todo) => {
-  //     return todo.id === id ? { id, task, completed } : todo;
-  //   });
-  //   setTodoList(newTodo);
-  //   setEditTodo("");
-  // };
-
-  // useEffect(() => {
-  //   if (editTodo) {
-  //     setInput(editTodo.task);
-  //   } else {
-  //     setInput("");
-  //   }
-  // }, [setInput, editTodo]);
-
   const handleInputChange = (event) => {
     setInput(event.target.value);
   };
