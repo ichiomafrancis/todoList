@@ -5,75 +5,127 @@
 }
 
 .app {
-  width: 60rem;
-  margin: 5rem auto;
-  background-color: #1680ea;
-  height: 80vh;
-  padding: 3rem 5rem;
+  background-color: #12343b;
+  min-width: 45rem;
+  min-height: 65rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.6rem 4rem rgba(0, 0, 0, 0.5);
+  margin: 1rem 0;
   position: relative;
 }
 
-.header > h1 {
-  margin-bottom: 1rem;
+.header {
+  font-size: 1.5rem;
+  color: #fff;
   text-align: center;
-  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.1rem;
 }
 
-.input--form {
+.form {
   display: flex;
-  justify-content: center;
+  gap: 2.5rem;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
-
-.input--form > input {
-  padding: 0.5rem 3rem;
-  margin-right: 0.5rem;
+.form-input {
+  outline: none;
+  width: 30rem;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  color: #ccc;
+  background-color: #000;
+  border: 0.1rem solid #c89666;
+  border-radius: 1rem;
 }
 
 button {
-  border: 0.1rem solid #444;
-  padding: 0.3rem 0.5rem;
-  background-color: #fff;
-  border-radius: 0.5rem;
-  /* box-shadow: 0.3rem 0.3rem 0.3rem rgba(218, 13, 13, 0.1); */
-}
-
-button:hover,
-button:active {
-  /* color: ; */
-  background-color: #16e027;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
   cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.02);
 }
 
-.delete:hover,
-.delete:active {
-  /* color: ; */
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button-add {
+  background-color: #f1af71;
+}
+
+.list-wrapper {
+  margin-bottom: 2rem;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  padding-right: 0;
+  max-height: 3rem;
+}
+
+.list {
+  width: 22rem;
+  background-color: #12343b;
+  border: none;
+  color: #ccc;
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
+.button-complete,
+.button-edit,
+.button-delete {
+  outline: none;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.button-complete {
+  color: #ff6c6c;
+}
+
+.button-edit {
+  color: #e2d029;
+}
+
+.button-delete {
+  color: lightseagreen;
+}
+
+.button-delete:hover,
+.button-delete:active {
   background-color: #f00;
 }
 
-.clear--completed {
+.complete {
+  text-decoration-style: solid;
+  text-decoration-line: line-through;
+  text-decoration-color: #ff6c6c;
+  opacity: 0.6;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* .clear--completed {
+  background-color: #f1af71;
+  padding: 1rem;
   position: absolute;
   bottom: 5rem;
-  left: 25rem;
-}
-
-.todo {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.strike {
-  text-decoration: line-through;
-}
-
-.todo--item {
-  width: fit-content;
-  /* outline: none; */
-  border: 0.1rem solid #ccc;
-  padding: 0.3rem 3rem;
-  font-size: 2.5rem;
-  background-color: #ccc;
-}
+  left: 50%;
+  translate: -50% -50%;
+} */

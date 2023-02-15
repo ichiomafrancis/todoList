@@ -1,22 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 
-function ToDo({ id, task }) {
-  const [complete, setComplete] = useState(false);
-
-  const handleToggle = () => {
-    setComplete((prev) => !prev);
-  };
-
+const ToDo = ({ task, completed, markDone, editTask, deleteTodo }) => {
   return (
-    <div className="todo">
-      <ul>
-        <li className={`todo--item ${complete ? "strike" : ""}`}>{task}</li>
-      </ul>
-      <button className="delete">X</button>
-      <button onClick={handleToggle} className="done">
-        Done
-      </button>
+    <div className="list-wrapper">
+      <li className="list-item">
+        <input
+          type="text"
+          value={task}
+          className={`list ${completed ? "complete" : ""}`}
+          onChange={(event) => event.preventDefault()}
+        />
+        <div>
+          <button className="button-complete" onClick={markDone}>
+            <i className="fa fa-check-circle"></i>
+          </button>
+          <button className="button-edit" onClick={editTask}>
+            <i className="fa fa-edit"></i>
+          </button>
+          <button className="button-delete" onClick={deleteTodo}>
+            <i className="fa fa-trash"></i>
+          </button>
+        </div>
+      </li>
     </div>
   );
-}
+};
+
 export default ToDo;
